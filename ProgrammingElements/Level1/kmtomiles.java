@@ -1,4 +1,4 @@
-public class kmto {
+public class kmtomiles {
     public static void main(String[] args) {
         double kilometers = 10.8;
         double conversionFactor = 1.6;
