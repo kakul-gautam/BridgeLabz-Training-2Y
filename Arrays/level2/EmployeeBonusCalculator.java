@@ -1,4 +1,4 @@
-package Arrays.level1.level2;
+package Arrays.level2;
 import java.util.Scanner;
 
 public class EmployeeBonusCalculator {
