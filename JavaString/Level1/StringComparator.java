@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class StringComparator {
     public static boolean compareUsingCharAt(String str1, String str2) {
-        // First check if lengths are equal
         if (str1.length() != str2.length()) {
             return false;
         }
