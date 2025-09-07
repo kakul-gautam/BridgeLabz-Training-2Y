@@ -1,0 +1,66 @@
+package JavaMethods.Level3;
+
+import java.util.Scanner;
+
+public class FactorUtility {
+    public static int[] findFactors(int number) {
+        int count = 0;
+        for (int i = 1; i <= number; i++) {
+            if (number % i == 0) count++;
+        }
+        int[] factors = new int[count];
+        int index = 0;
+        for (int i = 1; i <= number; i++) {
+            if (number % i == 0) {
+                factors[index++] = i;
+            }
+        }
+
+        return factors;
+    }
+    public static int findGreatestFactor(int[] factors) {
+        int max = factors[0];
+        for (int f : factors) {
+            if (f > max) max = f;
+        }
+        return max;
+    }
+    public static int findSumOfFactors(int[] factors) {
+        int sum = 0;
+        for (int f : factors) {
+            sum += f;
+        }
+        return sum;
+    }
+    public static long findProductOfFactors(int[] factors) {
+        long product = 1;
+        for (int f : factors) {
+            product *= f;
+        }
+        return product;
+    }
+    public static double findProductOfCubes(int[] factors) {
+        double product = 1;
+        for (int f : factors) {
+            product *= Math.pow(f, 3);
+        }
+        return product;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a positive integer: ");
+        int number = scanner.nextInt();
+        int[] factors = findFactors(number);
+        System.out.print("\nFactors of " + number + ": ");
+        for (int f : factors) System.out.print(f + " ");
+        int greatest = findGreatestFactor(factors);
+        int sum = findSumOfFactors(factors);
+        long product = findProductOfFactors(factors);
+        double cubeProduct = findProductOfCubes(factors);
+        System.out.println("\n\nGreatest Factor: " + greatest);
+        System.out.println("Sum of Factors: " + sum);
+        System.out.println("Product of Factors: " + product);
+        System.out.printf("Product of Cubes of Factors: %.2f\n", cubeProduct);
+    }
+}
