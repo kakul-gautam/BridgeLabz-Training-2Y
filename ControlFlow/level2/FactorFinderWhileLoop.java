@@ -1,4 +1,4 @@
-package ControlFlow.level1.level2;
+package ControlFlow.level2;
 import java.util.Scanner;
 
 public class FactorFinderWhileLoop {
