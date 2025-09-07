@@ -1,4 +1,4 @@
-package JavaString.Level1;
+package JavaMethods.Level1;
 import java.util.Scanner;
 
 public class StringCompare {
