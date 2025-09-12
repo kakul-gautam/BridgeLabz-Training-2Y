@@ -1,0 +1,39 @@
+package Level1;
+public class HotelBooking {
+    private String guestName;
+    private String roomType;
+    private int nights;
+    public HotelBooking() {
+        this("Guest", "Standard", 1); // Constructor chaining
+    }
+    public HotelBooking(String guestName, String roomType, int nights) {
+        this.guestName = guestName;
+        this.roomType = roomType;
+        this.nights = nights;
+    }
+    public HotelBooking(HotelBooking other) {
+        this.guestName = other.guestName;
+        this.roomType = other.roomType;
+        this.nights = other.nights;
+    }
+    public void displayBooking() {
+        System.out.println("Guest Name : " + guestName);
+        System.out.println("Room Type  : " + roomType);
+        System.out.println("Nights     : " + nights);
+    }
+    public static void main(String[] args) {
+        HotelBooking defaultBooking = new HotelBooking();
+        System.out.println("Default Booking:");
+        defaultBooking.displayBooking();
+
+        System.out.println("\n");
+        HotelBooking customBooking = new HotelBooking("Kakul", "Deluxe", 3);
+        System.out.println("Custom Booking:");
+        customBooking.displayBooking();
+
+        System.out.println("\n");
+        HotelBooking clonedBooking = new HotelBooking(customBooking);
+        System.out.println("Cloned Booking:");
+        clonedBooking.displayBooking();
+    }
+}
